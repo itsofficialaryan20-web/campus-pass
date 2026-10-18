@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { -webkit-text-size-adjust: 100%; }
+  body { @apply bg-page font-sans text-ink antialiased; }
+  :focus-visible { @apply outline-none ring-2 ring-brand ring-offset-2; }
+  input, textarea, select { @apply text-sm; }
+}
+@layer components {
+  .input { @apply w-full rounded-lg border border-line-strong bg-white px-3 py-2.5 text-sm text-ink placeholder:text-ink-muted focus-visible:ring-2 focus-visible:ring-brand disabled:bg-subtle disabled:text-ink-muted; }
+  .input-error { @apply border-danger-solid; }
+}
